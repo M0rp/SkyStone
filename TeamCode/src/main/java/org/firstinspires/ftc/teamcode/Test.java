@@ -1,20 +1,17 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.DcMotor;
 
-public class Copy extends OpMode
+public class Test extends OpMode
 {
 
-    //DcMotor test = null;
+    MecanumDriveTrain driveTrain;
 
     @Override
     public void init ()
     {
 
-        //test = hardwareMap.dcMotor.get("test");
-
-        //test.setPower(0);
+        driveTrain = new MecanumDriveTrain();
 
     }
 
@@ -22,7 +19,7 @@ public class Copy extends OpMode
     public void start ()
     {
 
-        //test.setPower(0);
+
 
     }
 
@@ -30,7 +27,7 @@ public class Copy extends OpMode
     public void loop ()
     {
 
-        //test.setPower(-gamepad1.left_stick_y);
+        driveTrain.mecanumDriveRightJoystickTurn(gamepad1);
 
     }
 
@@ -38,7 +35,7 @@ public class Copy extends OpMode
     public void stop ()
     {
 
-        //test.setPower(0);
+
 
     }
 
