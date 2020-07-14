@@ -9,10 +9,10 @@ public class RobotConfig {
     /*
      *    Fill out the config and it will be applied to the class that you choose to use
      */
-    public static final String leftFrontWheel = "";
-    public static final String rightFrontWheel = "";
-    public static final String leftBackWheel = "";
-    public static final String rightBackWheel = "";
+    public static final String leftFrontWheel = "front_left_motor";
+    public static final String rightFrontWheel = "front_right_motor";
+    public static final String leftBackWheel = "back_left_motor";
+    public static final String rightBackWheel = "back_right_motor";
 
     public static final String extraMotorOne = "";
     public static final String extraMotorTwo = "";
@@ -25,36 +25,20 @@ public class RobotConfig {
 
     public RobotConfig () {}
 
-    DcMotor assignMotorLeftFrontWheel () {
-        return hwMap.dcMotor.get(leftFrontWheel);
+    public String getLeftFrontWheel() {
+        return leftFrontWheel;
     }
 
-    DcMotor assignMotorRightFrontWheel () {
-        return hwMap.dcMotor.get(rightFrontWheel);
+    public String getRightFrontWheel() {
+        return  rightFrontWheel;
     }
 
-    DcMotor assignMotorLeftBackWheel () {
-        return hwMap.dcMotor.get(leftBackWheel);
+    public String getLeftBackWheel () {
+        return leftBackWheel;
     }
 
-    DcMotor assignMotorRightBackWheel () {
-        return hwMap.dcMotor.get(rightBackWheel);
-    }
-
-    DcMotor assignMotorExtraMotorOne () {
-        return hwMap.dcMotor.get(extraMotorOne);
-    }
-
-    DcMotor assignMotorExtraMotorTwo () {
-        return hwMap.dcMotor.get(extraMotorTwo);
-    }
-
-    DcMotor assignMotorExtraMotorThree () {
-        return hwMap.dcMotor.get(extraMotorThree);
-    }
-
-    DcMotor assignMotorExtraMotorFour () {
-        return hwMap.dcMotor.get(extraMotorFour);
+    public String getRightBackWheel () {
+        return rightBackWheel;
     }
 
 }
